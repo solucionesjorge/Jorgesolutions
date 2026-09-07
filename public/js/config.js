@@ -34,7 +34,7 @@ window.SJ_CONFIG = {
   workshopWhatsappDisplay: '+53 5 246 7279',
   workshopHoursDisplay: 'Lunes a sábado, 8:00 am – 5:00 pm',
 
-  mapsUrl: 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent('Calle 25 #4411 A, entre 44 y 46, municipio Playa, La Habana, Cuba'),
+  mapsUrl: 'https://maps.app.goo.gl/oXtDwDvNvSbgo59p9?g_st=ac',
   mapsEmbedSrc: 'https://maps.google.com/maps?q=' + encodeURIComponent('Calle 25 #4411 A, entre 44 y 46, Playa, La Habana, Cuba') + '&output=embed',
 
   description: 'Más de 8 años manteniendo los Geely de Cuba en movimiento. Repuestos originales y alternativos, asesoría especializada y atención rápida para que encuentres exactamente lo que tu vehículo necesita. Tu Geely, en manos de especialistas.',
