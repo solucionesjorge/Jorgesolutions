@@ -1060,3 +1060,19 @@ footer {
   .hero-cta.cta-4 { grid-template-columns: 1fr; }
   .form-card { padding: 24px 20px; }
 }
+@media (max-width: 560px) {
+  .search-panel {
+    width: 100%;
+    max-width: 100%;
+    flex-direction: column;
+  }
+
+  .search-panel input {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .search-panel button {
+    width: 100%;
+  }
+}
