@@ -13,6 +13,7 @@ window.SJ_CONFIG = {
 
   // Redes sociales confirmadas
   facebookPage: 'https://www.facebook.com/share/1F3N7QR8Mi/',
+  geelyFacebookPage: 'https://www.facebook.com/share/1FCr6JDNz8/',
   instagram: 'https://www.instagram.com/geelysjcuba',
   facebookChannel: 'https://www.facebook.com/share/g/1CrfAU2Kqe/',
 
