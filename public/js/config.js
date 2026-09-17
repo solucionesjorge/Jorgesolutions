@@ -6,13 +6,13 @@ window.SJ_CONFIG = {
   brand: 'Soluciones Jorge',
 
   // Dominio público definitivo (se usa para enlaces canónicos y para compartir).
-  siteUrl: 'https://solucionesjorge.com',
+    siteUrl: 'https://www.solucionesjorge.com',
 
   whatsappNumber: '5352467279', // formato internacional sin "+" (53 = Cuba)
   whatsappDisplay: '+53 5 246 7279',
 
   // Redes sociales confirmadas
-  facebookPage: 'https://www.facebook.com/share/1FCr6JDNz8/',
+  facebookPage: 'https://www.facebook.com/share/1F3N7QR8Mi/',
   instagram: 'https://www.instagram.com/geelysjcuba',
   facebookChannel: 'https://www.facebook.com/share/g/1CrfAU2Kqe/',
 
