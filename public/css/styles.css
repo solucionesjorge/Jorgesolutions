@@ -582,6 +582,63 @@ footer {
 
 /* ---------------------------------- Página de catálogo ---------------------------------- */
 .catalog-hero {
+
+
+/* Entrada de marca Soluciones Jorge — rojo, azul, blanco y negro */
+.navbar {
+  background: linear-gradient(105deg, rgba(3,13,30,.96), rgba(8,50,111,.94));
+  border-bottom: 2px solid rgba(230,0,18,.72);
+}
+.navbar.is-scrolled { box-shadow: 0 8px 28px rgba(3,13,30,.28), 0 2px 14px rgba(230,0,18,.18); }
+.brand { color: #fff; }
+.brand .brand-text small { color: rgba(255,255,255,.68); }
+.nav-links { color: rgba(255,255,255,.88); }
+.nav-links a:hover, .nav-links a.active { color: #fff; }
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+  left: 2px; right: 2px; bottom: 1px;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--red-600);
+  box-shadow: 0 0 12px rgba(255,59,48,.65);
+}
+.navbar .icon-btn {
+  border-color: rgba(255,255,255,.22);
+  background: rgba(255,255,255,.10);
+  color: #fff;
+}
+.navbar .icon-btn:hover { background: rgba(255,255,255,.18); box-shadow: 0 10px 24px rgba(0,0,0,.22); }
+
+.hero {
+  background:
+    radial-gradient(900px 520px at 10% 0%, rgba(230,0,18,.34), transparent 58%),
+    radial-gradient(1000px 700px at 92% 8%, rgba(77,148,221,.58), transparent 58%),
+    linear-gradient(135deg, #020b1c 0%, #061b44 42%, #0b4a94 100%);
+}
+.hero::before {
+  background-image:
+    linear-gradient(115deg, transparent 0 68%, rgba(230,0,18,.16) 68% 69%, transparent 69%),
+    radial-gradient(rgba(255,255,255,.10) 1px, transparent 1px);
+  background-size: 100% 100%, 26px 26px;
+  opacity: .52;
+}
+.hero-logo-wrap::before {
+  content: "";
+  position: absolute;
+  width: min(390px,90%);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,.18), rgba(30,111,196,.12) 48%, transparent 70%);
+  border: 1px solid rgba(255,255,255,.10);
+  box-shadow: 0 0 70px rgba(30,111,196,.28), 0 0 46px rgba(230,0,18,.10);
+}
+.hero-logo-wrap img { position: relative; z-index: 1; filter: drop-shadow(0 30px 60px rgba(0,0,0,.55)); }
+.search-panel {
+  background: rgba(255,255,255,.13);
+  border-color: rgba(255,255,255,.28);
+  box-shadow: 0 18px 46px rgba(3,13,30,.28), 0 0 28px rgba(30,111,196,.15);
+}
   padding: calc(var(--header-h) + 44px) 24px 44px;
   background: linear-gradient(180deg, var(--navy-950), var(--navy-800));
   color: #fff;
