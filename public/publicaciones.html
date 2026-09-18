@@ -76,36 +76,6 @@
   </div>
 </section>
 
-<div class="catalog-toolbar">
-  <div class="catalog-toolbar-inner" style="flex-direction:column;align-items:stretch;gap:12px">
-    <div class="filter-row" style="margin-top:0">
-      <div class="chip-scroll" id="pub-chip-scroll">
-        <button class="chip active" data-seccion="">Todas</button>
-        <!-- secciones se insertan aquí -->
-      </div>
-      <form class="search-inline" id="pub-search-form">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="flex-shrink:0;color:#79808c"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-        <input type="search" id="pub-search-input" placeholder="Buscar en publicaciones...">
-        <button type="submit" aria-label="Buscar">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-      </form>
-    </div>
-  </div>
-</div>
-
-<main class="catalog-body">
-  <div class="container">
-    <div class="blog-grid" id="feed-grid" style="padding:40px 0 100px"></div>
-    <div class="empty-state" id="feed-empty" style="display:none">
-      <div class="icon">📭</div>
-      <h3>Todavía no hay publicaciones</h3>
-      <p>Muy pronto vas a encontrar aquí ofertas, novedades y avisos del negocio.</p>
-      <a data-sj-link="whatsapp" class="btn btn-primary" style="margin-top:18px">Preguntar por WhatsApp</a>
-    </div>
-  </div>
-</main>
-
 <footer>
   <div class="footer-inner">
     <div class="footer-col">
@@ -141,19 +111,8 @@
   <svg width="28" height="28" viewBox="0 0 24 24" fill="#fff"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-1-.3-.1-.5-.1-.6.1-.2.3-.7 1-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.2-.4.1-.2 0-.4 0-.5C10.1 9 9.6 7.8 9.4 7.3c-.2-.4-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.6 1.1 2.7c.1.2 1.9 3 4.7 4.1.7.3 1.2.4 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.2-.3-.2-.6-.4z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.3L2 22l4.8-1.5A9.9 9.9 0 0012 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.7 0-3.3-.5-4.7-1.3l-.3-.2-3.2 1 1-3.1-.2-.3A7.9 7.9 0 014 12c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8z"/></svg>
 </a>
 
-<div class="modal-overlay" id="pub-modal">
-  <div class="modal-card">
-    <button class="modal-close" id="pub-modal-close" aria-label="Cerrar">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="#04142e" stroke-width="2" stroke-linecap="round"/></svg>
-    </button>
-    <div class="modal-media" id="pub-modal-media"></div>
-    <div class="modal-info" id="pub-modal-info"></div>
-  </div>
-</div>
-
 <script src="/js/config.js"></script>
 <script src="/js/main.js"></script>
-<script src="/js/publicaciones.js"></script>
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
