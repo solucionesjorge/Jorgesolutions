@@ -122,7 +122,9 @@ function serveStatic(req, res, urlPath) {
 function streamFile(res, filePath) {
   const ext = path.extname(filePath).toLowerCase();
   const type = MIME[ext] || 'application/octet-stream';
-  const cacheControl = ext === '.html' ? 'no-cache' : 'public, max-age=86400';
+  const cacheControl = ['.html', '.css', '.js'].includes(ext)
+    ? 'no-cache, must-revalidate'
+    : 'public, max-age=86400';
   res.writeHead(200, { 'Content-Type': type, 'Cache-Control': cacheControl });
   fs.createReadStream(filePath).pipe(res);
 }
