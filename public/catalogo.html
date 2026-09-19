@@ -59,12 +59,22 @@
 </header>
 
 <div class="catalog-toolbar">
-  <div class="catalog-toolbar-inner" style="flex-direction:column;align-items:stretch;gap:12px">
+  <div class="catalog-toolbar-inner catalog-toolbar-stack">
+    <form class="search-inline catalog-search" id="search-form">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="flex-shrink:0;color:#79808c"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <input type="search" id="search-input" placeholder="Buscar pieza, código o modelo...">
+      <button type="submit" aria-label="Buscar">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </form>
     <div class="brand-tabs" id="brand-tabs">
       <button class="brand-tab active" data-brand="">Todas las marcas</button>
       <!-- marcas se insertan aquí -->
     </div>
-    <div class="filter-row">
+    <button class="mobile-filter-toggle" id="mobile-filter-toggle" type="button" aria-expanded="false" aria-controls="catalog-filters">
+      <span>Filtrar y ordenar</span><span aria-hidden="true">☰</span>
+    </button>
+    <div class="filter-row catalog-filters" id="catalog-filters">
       <div class="chip-scroll" id="chip-scroll" style="flex:1">
         <button class="chip active" data-category="">Todas las categorías</button>
         <!-- categorías se insertan aquí -->
@@ -78,13 +88,6 @@
         <option value="price_desc">Precio: mayor a menor</option>
       </select>
       <label class="filter-checkbox"><input type="checkbox" id="instock-check"> Solo disponibles</label>
-      <form class="search-inline" id="search-form">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="flex-shrink:0;color:#79808c"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-        <input type="search" id="search-input" placeholder="Buscar por nombre o código...">
-        <button type="submit" aria-label="Buscar">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-      </form>
     </div>
   </div>
 </div>
