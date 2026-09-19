@@ -30,6 +30,8 @@
   var searchForm = document.getElementById('search-form');
   var searchInput = document.getElementById('search-input');
   var titleEl = document.getElementById('catalog-title');
+  var filterToggle = document.getElementById('mobile-filter-toggle');
+  var catalogFilters = document.getElementById('catalog-filters');
 
   var modal = document.getElementById('product-modal');
   var modalMedia = document.getElementById('modal-media');
@@ -152,7 +154,7 @@
     var agotado = p.inStock === false;
     var tag = agotado ? 'Agotado' : nameOfCategory(p.category);
     var media = p.image
-      ? '<img src="' + esc(p.image) + '" alt="' + esc(p.name) + '" loading="lazy">'
+      ? '<img src="' + esc(p.image) + '" alt="' + esc(p.name) + '" loading="lazy" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="ph" hidden>🔧</span>'
       : '<span class="ph">🔧</span>';
     var price = money(p.price);
     var priceHTML = price
@@ -312,6 +314,13 @@
     // Si borra el buscador, se vuelve a la lista completa sin tener que enviar.
     searchInput.addEventListener('search', function () {
       if (!searchInput.value.trim() && state.q) { state.q = ''; load(); }
+    });
+  }
+  if (filterToggle && catalogFilters) {
+    filterToggle.addEventListener('click', function () {
+      var open = catalogFilters.classList.toggle('is-open');
+      filterToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      filterToggle.querySelector('span:last-child').textContent = open ? '✕' : '☰';
     });
   }
 
