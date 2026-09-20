@@ -17,9 +17,10 @@ window.SJ_CONFIG = {
   instagram: 'https://www.instagram.com/geelysjcuba',
   facebookChannel: 'https://www.facebook.com/share/g/1CrfAU2Kqe/',
 
+  youtubeUrl: 'https://www.youtube.com/@Paolaoficial154',
+
   // Pendientes de recibir la URL real — se ocultan automáticamente mientras
   // queden vacíos. En cuanto tengas el enlace, pégalo aquí entre comillas.
-  youtubeUrl: '',
   whatsappChannelUrl: '',
   facebookGroupUrl: '', // "Grupo Geely SJ Cuba"
   linktreeUrl: '',
