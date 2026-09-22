@@ -147,7 +147,12 @@ ul { list-style: none; margin: 0; padding: 0; }
   font-size: 16px;
   color: var(--white);
 }
-.brand img { height: 40px; width: auto; }
+.brand img {
+  height: 72px;
+  width: auto;
+  margin: -14px -8px -14px -6px;
+  flex: 0 0 auto;
+}
 .brand .brand-text { display: flex; flex-direction: column; line-height: 1.1; }
 .brand .brand-text small { font-weight: 600; color: rgba(255,255,255,0.68); font-size: 11px; letter-spacing: 0.03em; }
 
@@ -966,7 +971,10 @@ footer {
   :root { --header-h: 66px; }
   .navbar-inner { padding: 0 14px; }
   .brand { gap: 8px; font-size: 15px; }
-  .brand img { height: 34px; }
+  .brand img {
+    height: 62px;
+    margin: -12px -7px -12px -5px;
+  }
   .brand .brand-text small { font-size: 10px; }
   .nav-actions .btn-sm { padding: 10px 16px; }
 
