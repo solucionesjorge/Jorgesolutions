@@ -262,7 +262,7 @@
       state.products = await getJSON('/api/products?' + queryString());
       if (!Array.isArray(state.products)) state.products = [];
       state.products = state.products.filter(function (product) {
-        return product.id !== 'e12b225e-d09d-4f45-ad37-2ce96ead5217';
+        return product.id !== 'e12b225e-d09d-4f45-ad37-2ce96ead5217' && product.id !== '7eb9d80b-2ff0-4c20-b35a-96bfc8092dbf';
       });
     } catch (err) {
       console.error('No se pudieron cargar las piezas:', err);
