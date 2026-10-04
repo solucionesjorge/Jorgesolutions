@@ -1205,3 +1205,16 @@ footer {
     width: 100%;
   }
 }
+
+/* Catálogo: miniaturas compactas y fotos completas al abrir la pieza */
+@media (max-width: 560px) {
+  .product-card { grid-template-columns: 112px minmax(0, 1fr); min-height: 148px; }
+  .product-media { min-height: 148px; }
+}
+.modal-media { min-height: 0; padding: 16px; overflow: hidden; }
+.modal-media img { display: block; width: 100%; height: min(56vh, 460px); object-fit: contain; }
+@media (max-width: 720px) {
+  .modal-overlay { padding: 12px; }
+  .modal-card { max-height: calc(100dvh - 24px); }
+  .modal-media img { height: min(36dvh, 300px); }
+}
