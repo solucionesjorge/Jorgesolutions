@@ -1212,9 +1212,9 @@ footer {
   .product-media { min-height: 148px; }
 }
 .modal-media { min-height: 0; padding: 16px; overflow: hidden; }
-.modal-media img { display: block; width: 100%; height: min(56vh, 460px); object-fit: cover; }
+.modal-media img { display: block; width: auto; height: auto; max-width: 100%; max-height: min(56vh, 460px); object-fit: contain; }
 @media (max-width: 720px) {
   .modal-overlay { padding: 12px; }
   .modal-card { max-height: calc(100dvh - 24px); }
-  .modal-media img { height: min(36dvh, 300px); }
+  .modal-media img { max-height: min(36dvh, 300px); }
 }
