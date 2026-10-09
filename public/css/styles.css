@@ -1216,5 +1216,5 @@ footer {
 @media (max-width: 720px) {
   .modal-overlay { padding: 12px; }
   .modal-card { max-height: calc(100dvh - 24px); }
-  .modal-media img { max-height: min(36dvh, 300px); }
+  .modal-media img { max-height: min(44dvh, 360px); }
 }
