@@ -154,7 +154,7 @@
     var agotado = p.inStock === false;
     var tag = agotado ? 'Agotado' : nameOfCategory(p.category);
     var media = p.image
-      ? '<img src="' + esc(p.image) + '" alt="' + esc(p.name) + '" loading="lazy" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="ph" hidden>🔧</span>'
+      ? '<img src="' + esc(p.image) + '" alt="' + esc(p.name) + '" loading="lazy" decoding="async" fetchpriority="low" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="ph" hidden>🔧</span>'
       : '<span class="ph">🔧</span>';
     var price = money(p.price);
     var priceHTML = price
