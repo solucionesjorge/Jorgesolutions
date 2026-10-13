@@ -980,7 +980,7 @@ footer {
 
   .hero { padding: calc(var(--header-h) + 28px) 18px 54px; }
   .hero-inner { gap: 22px; }
-  .hero-logo-wrap { order: 0; }
+  .hero-logo-wrap { order: -1; }
   .hero-logo-wrap img { width: min(210px, 58vw); }
   .hero-logo-wrap::before { width: min(250px, 72vw); }
   .hero h1 { font-size: clamp(34px, 10.5vw, 44px); }
