@@ -1218,3 +1218,15 @@ footer {
   .modal-card { max-height: calc(100dvh - 24px); }
   .modal-media img { max-height: min(44dvh, 360px); }
 }
+
+
+/* Accesos sociales destacados en la portada */
+.hero-social-links{display:flex;flex-wrap:wrap;align-items:center;gap:9px;margin:16px 0 20px;position:relative;z-index:1}
+.hero-social-title{width:100%;margin:0 0 2px;color:var(--navy-900);font-size:12px;font-weight:800;letter-spacing:.02em}
+.hero-social-link{display:inline-flex;align-items:center;gap:8px;min-height:42px;padding:7px 13px;border:1px solid rgba(4,20,46,.12);border-radius:999px;background:#fff;color:var(--navy-900);font-size:12px;font-weight:700;box-shadow:0 5px 16px rgba(4,20,46,.08);transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+.hero-social-link:hover{transform:translateY(-2px);border-color:rgba(4,20,46,.24);box-shadow:0 9px 22px rgba(4,20,46,.13)}
+.hero-social-link:focus-visible{outline:3px solid rgba(30,111,196,.35);outline-offset:3px}
+.hero-social-icon{display:inline-flex;width:23px;height:23px;align-items:center;justify-content:center;flex:none;border-radius:50%;background:var(--navy-700);color:#fff;font-size:12px;font-weight:800}
+.hero-social-icon.facebook{background:#1877f2}.hero-social-icon.instagram{background:linear-gradient(135deg,#833ab4,#e1306c,#f77737)}.hero-social-icon.youtube{background:#d71920}.hero-social-icon.whatsapp{background:#188a55}
+@media(max-width:980px){.hero-social-links{justify-content:center}}
+@media(max-width:560px){.hero-social-links{justify-content:center;gap:7px;margin:13px auto 17px;max-width:460px}.hero-social-title{font-size:11.5px;text-align:center}.hero-social-link{min-height:42px;padding:7px 10px;font-size:11px}}
