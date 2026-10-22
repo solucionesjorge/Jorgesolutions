@@ -427,7 +427,19 @@ async function handleApi(req, res, pathname, query) {
     if (category) products = products.filter((p) => p.category === category);
     if (inStockOnly) products = products.filter((p) => p.inStock !== false);
     if (q) {
-      products = products.filter((p) => `${p.name} ${p.description || ''} ${p.sku || ''}`.toLowerCase().includes(q));
+      const stopWords = new Set(['de', 'del', 'la', 'las', 'el', 'los', 'para', 'por', 'con', 'y', 'en']);
+      const normalizeSearch = (value) => String(value || '')
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, ' ')
+        .trim();
+      const terms = normalizeSearch(q).split(/\s+/).filter((term) => term.length > 1 && !stopWords.has(term));
+      products = products.filter((p) => {
+        const searchable = normalizeSearch(`${p.name} ${p.description || ''} ${p.sku || ''} ${p.brand || ''} ${p.model || ''}`);
+        const words = searchable.split(/\s+/);
+        return terms.length === 0 || terms.every((term) => words.some((word) => word === term || word.startsWith(term)));
+      });
     }
 
     if (sort === 'price_asc') products.sort((a, b) => (a.price ?? Infinity) - (b.price ?? Infinity));
